@@ -4,6 +4,9 @@ linters:
   enable:
     - errcheck
     - goimports
+    - deadcode
+    - structcheck
+    - varcheck
     - revive
     - ineffassign
     - govet
