@@ -81,14 +81,14 @@ const (
 	minChunkSize     = fs.SizeSuffix(googleapi.MinUploadChunkSize)
 	defaultChunkSize = 8 * fs.Mebi
 	partialFields    = "id,name,size,md5Checksum,trashed,explicitlyTrashed,modifiedTime,createdTime,mimeType,parents,webViewLink,shortcutDetails,exportLinks,resourceKey"
-	listRGrouping    = 50   // number of IDs to search at once when using ListR
+	listRGrouping    = 100   // number of IDs to search at once when using ListR
 	listRInputBuffer = 1000 // size of input buffer when using ListR
 	defaultXDGIcon   = "text-html"
 
 	// Mod
 	defaultSAMinSleep      = fs.Duration(100 * time.Millisecond)
-	maxServices            = 100
-	defaltPreloadServices  = 50
+	maxServices            = 1000
+	defaltPreloadServices  = 500
 	defaultSAPacerMinSleep = fs.Duration(50 * time.Millisecond)
 )
 
