@@ -126,7 +126,7 @@ names, or for debugging purposes.`,
 			Help: `If set this will pass bad blocks through as all 0.
 
 This should not be set in normal operation, it should only be set if
-trying to recover a crypted file with errors and it is desired to
+trying to recover an encrypted file with errors and it is desired to
 recover as much of the file as possible.`,
 			Default:  false,
 			Advanced: true,
@@ -268,6 +268,7 @@ func NewFs(ctx context.Context, name, rpath string, m configmap.Mapper) (fs.Fs, 
 		ReadMetadata:            true,
 		WriteMetadata:           true,
 		UserMetadata:            true,
+		PartialUploads:          true,
 	}).Fill(ctx, f).Mask(ctx, wrappedFs).WrapsFs(f, wrappedFs)
 
 	return f, err
